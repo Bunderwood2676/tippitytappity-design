@@ -27,6 +27,7 @@ classDiagram
         - History string
         + get_phrase string
         + add_phrase(phrase: string)
+  }
 
   class Account{
         - Account string
