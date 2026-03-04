@@ -9,11 +9,13 @@ tippitytappity is a program to practice typing
 classDiagram
    TippityTappity<|-- Phrases
    TippityTappity<|-- Accuracy
+   TippityTappity<|-- Result
   class TippityTappity{
         - Phrase: string
         - Accuracy: string
+        - Result: string
         + Accurate(Correct: string, incorrect: string) boolean
-        + get_accuracty() int
+        + get_accuracy() int
         + get_phrase() string
   }
   class Phrases{
@@ -23,6 +25,14 @@ classDiagram
   }
 
   class Accuracy{
-}
+        - Accuracy int
+        + get_AccuracyPercentage() int
+  }
+
+  class Result{
+        - Result string
+        + get_pass() string
+        + get_fail() string
+  }
         
 ```
