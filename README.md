@@ -11,6 +11,7 @@ classDiagram
    TippityTappity<|-- Phrases
    TippityTappity<|-- Accuracy
    TippityTappity<|-- Result
+   TippityTappity<|-- History
   class TippityTappity{
         - Account: string
         - Phrase: string
@@ -20,7 +21,12 @@ classDiagram
         + get_accuracy() int
         + get_phrase() string
         + get_account() string
+        + get_history() string
   }
+  class History{
+        - History string
+        + get_phrase string
+        + add_phrase(phrase: string)
 
   class Account{
         - Account string
